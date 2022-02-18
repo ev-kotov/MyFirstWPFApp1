@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyFirstWPFApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900">
+        Title="MainWindow" Height="350" Width="525">
     <Grid x:Name="grid1">
-        <Button x:Name="button1" Content="Кнопка" Margin="258,106,258,101" />
+        <TextBox x:Name="textBox1" Width="150" Height="30" VerticalAlignment="Top" Margin="20" />
+        <Button x:Name="button1"  Width="100" Height="30" Content="Кнопка" Click="Button_Click" />
     </Grid>
 </Window>

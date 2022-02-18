@@ -27,7 +27,12 @@ namespace MyFirstWPFApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("WPF на METANIT.COM");
+            string text = textBox1.Text;
+
+            if (text != "")
+            {
+                MessageBox.Show(text);
+            }
         }
     }
 }
