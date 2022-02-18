@@ -25,9 +25,11 @@ namespace MyFirstWPFApp
             InitializeComponent();
 
             Button myButton = new Button();
-            myButton.Width = 100;
-            myButton.Height = 30;
             myButton.Content = "Кнопка";
+            myButton.Width = 120;
+            myButton.Height = 40;
+            myButton.HorizontalAlignment = HorizontalAlignment.Center;
+            myButton.Background = new SolidColorBrush(Colors.Red);
             layoutGrid.Children.Add(myButton);
         }
     }
