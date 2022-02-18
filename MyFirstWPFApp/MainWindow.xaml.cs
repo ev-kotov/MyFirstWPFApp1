@@ -23,14 +23,16 @@ namespace MyFirstWPFApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+    }
+    public class Phone
+    {
+        public string Name { get; set; }
+        public int Price { get; set; }
 
-            Button myButton = new Button();
-            myButton.Content = "Кнопка";
-            myButton.Width = 120;
-            myButton.Height = 40;
-            myButton.HorizontalAlignment = HorizontalAlignment.Center;
-            myButton.Background = new SolidColorBrush(Colors.Red);
-            layoutGrid.Children.Add(myButton);
+        public override string ToString()
+        {
+            return $"Смартфон {this.Name}; цена: {this.Price}";
         }
     }
 }
