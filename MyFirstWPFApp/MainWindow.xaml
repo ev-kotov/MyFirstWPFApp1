@@ -3,13 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        
         xmlns:local="clr-namespace:MyFirstWPFApp"
-        
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Grid" Height="300" Width="400">
 
     <Grid ShowGridLines="False">
+
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -17,9 +16,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -30,12 +27,11 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        
         <TextBox x:Name="bankAccountTextBox" 
                  Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  />
-        <Button x:Name="button1" 
+        <Button x:Name="addMoney" 
                 Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" 
-                Content="Строка 0 Столбец 0" Click="Button_Click" />
+                Content="Внести средства" Click="AddMoneyToAccount" />
     </Grid>
 
 </Window>
