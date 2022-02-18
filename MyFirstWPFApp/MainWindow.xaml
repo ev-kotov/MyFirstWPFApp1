@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="900">
     <Grid x:Name="grid1">
-        //<Button x:Name="button1" Content="Кнопка" Margin="258,106,258,101" />
-        <Button Content="<"Hello">" />
+        <Button x:Name="button1" Content="Кнопка" Margin="258,106,258,101" />
     </Grid>
 </Window>
