@@ -24,15 +24,52 @@ namespace MyFirstWPFApp
         {
             InitializeComponent();
         }
-    }
-    public class Phone
-    {
-        public string Name { get; set; }
-        public int Price { get; set; }
 
-        public override string ToString()
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            return $"Смартфон {this.Name}; цена: {this.Price}";
+            try
+            {
+                // принимаем средсва
+                double bankAccount = Convert.ToDouble(bankAccountTextBox.Text);
+
+                if (bankAccount > 0)
+                {
+                    MessageBox.Show(bankAccount.ToString());
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Средства не внесены, повторите ввод");
+            }
+        }
+    }
+    class Account
+    {
+        public delegate void AccountHandler(string message);
+        public event AccountHandler? Notify;
+
+        // 1.Определение события
+        public Account(int sum) => Sum = sum;
+        public int Sum { get; private set; }
+
+        
+        public void Put(int sum) // Вызов события
+        {
+            Sum += sum;
+            Notify?.Invoke($"На счет поступило: {sum}");
+        }
+
+        public void Take(int sum) // Вызов события
+        {
+            if (Sum >= sum)
+            {
+                Sum -= sum;
+                Notify?.Invoke($"Со счета снято: {sum}");
+            }
+            else
+            {
+                Notify?.Invoke($"Недостаточно денег на счете. Текущий баланс: {Sum}"); ;
+            }
         }
     }
 }
