@@ -10,24 +10,22 @@
         
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    
-    <Window.Resources>
-        <col:ArrayList x:Key="days">
-            <sys:String>Понедельник</sys:String>
-            <sys:String>Вторник</sys:String>
-            <sys:String>Среда</sys:String>
-            <sys:String>Четверг</sys:String>
-            <sys:String>Пятница</sys:String>
-            <sys:String>Суббота</sys:String>
-            <sys:String>Воскресенье</sys:String>
-        </col:ArrayList>
-    </Window.Resources>
 
-    <Grid x:Name="layoutGrid">
-        <Button x:Name="phoneButton" Width="250" Height="40" HorizontalAlignment="Center">
-            <Button.Content>
-                <local:Phone Name="Lumia 950" Price="700" />
-            </Button.Content>
-        </Button>
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Button Grid.Column="0" Grid.Row="0" Content="Строка 0 Столбец 0"  />
+        <Button Grid.Column="0" Grid.Row="1" Content="Объединение трех столбцов" Grid.ColumnSpan="3"  />
+        <Button Grid.Column="2" Grid.Row="2" Content="Строка 2 Столбец 2"  />
     </Grid>
 </Window>
