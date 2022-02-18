@@ -23,16 +23,12 @@ namespace MyFirstWPFApp
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string text = textBox1.Text;
-
-            if (text != "")
-            {
-                MessageBox.Show(text);
-            }
+            Button myButton = new Button();
+            myButton.Width = 100;
+            myButton.Height = 30;
+            myButton.Content = "Кнопка";
+            layoutGrid.Children.Add(myButton);
         }
     }
 }
