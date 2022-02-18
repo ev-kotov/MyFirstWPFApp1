@@ -15,7 +15,7 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -28,10 +28,15 @@
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="bankAccountTextBox" 
-                 Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  />
-        <Button x:Name="addMoney" 
+                 Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"  />
+        
+        <Button x:Name="initialMoneyButtom" 
                 Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" 
-                Content="Внести средства" Click="AddMoneyToAccount" />
+                Content="Внести средства" Click="InitialMoney" />
+
+        <Button x:Name="withdrawMoneyButtom" 
+                Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2" 
+                Content="Снять средства" Click="WithdrawMoney" />
     </Grid>
 
 </Window>
